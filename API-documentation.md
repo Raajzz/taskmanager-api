@@ -14,8 +14,6 @@ POST `/api/v1/` => POST task
 ### PATCH
 
 PATCH `/api/v1/:id` => UPDATE task <br>
-PATCH `/api/v1/:id/check` => 
-  UPDATE task by inverting the check field (Checked Vs. Unchecked segregation will be done in the frontend) 
 
 ### DELETE
 
