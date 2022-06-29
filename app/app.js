@@ -15,12 +15,9 @@ const PORT = process.env.PORT || 5000;
 
 const start = async () => {
 	try {
-		// Here we do the following this way because we first try to connect
-		// with the cloud database and only if the cloud works fine then
-		// we'll connect with the server. This is better as it will allow
-		// us to save resources if our database connection gets messed up.
-		// a server with a database doesn't work isn't really a great thing
-		// eh.
+
+		// In the below lines, we'll first connect with the cloud database and then if that works fine, we'll move onto connecting the actual application. This will prevent the server from running without a database connection.
+
 		await mongooseConnect(process.env.MONGO_URI);
 		app.listen(PORT, () => {
 			console.log(`Server listening on port ${PORT}`);

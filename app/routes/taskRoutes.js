@@ -10,7 +10,7 @@ const {
 
 router.route("/").get(getAllTasks).post(postTask);
 // Here we're using `patch` because, PATCH is for updating
-// atleast one key-value pair in a document
+// at least one key-value pair in a document
 // Whereas PUT is for modifying the entire document
 router.route("/:id").get(getTask).patch(updateTask).delete(deleteTask);
 
